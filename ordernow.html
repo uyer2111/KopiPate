@@ -1,0 +1,629 @@
+
+
+
+<!DOCTYPE html>
+<head>
+<title> KopiPate | Order Now </title>
+</head>
+<script>
+     function acceptInput () {
+       
+       var Name=frmsample.txtName.value;
+       var Address=frmsample.txtAddress.value;
+       var Contact=frmsample.txtContact.value;
+       var amountPlaced=frmsample.txtPrice.value;
+       
+       var AmericanoT = document.getElementById("americanot");
+       var AmericanoG = document.getElementById("americanog");
+ 
+       var MacchiatoT = document.getElementById("macchiatot");
+       var MacchiatoG = document.getElementById("macchiatog");
+   
+       var VanillaT = document.getElementById("vanillat");
+       var VanillaG = document.getElementById("vanillag");
+   
+       var MatchaT = document.getElementById("matchat");
+       var MatchaG = document.getElementById("matchag");
+   
+       var OkinawaT = document.getElementById("okinawat");
+       var OkinawaG = document.getElementById("okinawag");
+      
+       var WintermelonT = document.getElementById("wintermelont");
+       var WintermelonG = document.getElementById("wintermelong");
+ 
+       var VelvetT = document.getElementById("velvett");
+       var VelvetG = document.getElementById("velvetg");
+   
+       var MmatchaT = document.getElementById("mmatchat");
+       var MmatchaG = document.getElementById("mmatchag");
+   
+       var Cookie1 = document.getElementById("cookie3");
+       var Cookie2 = document.getElementById("cookie5");
+   
+       var Croissant1 = document.getElementById("croissant3");
+       var Croissant2 = document.getElementById("croissant5");
+   
+       var Donut1 = document.getElementById("donut3");
+       var Donut2 = document.getElementById("donut5");
+   
+       var Muffin1 = document.getElementById("muffin3");
+       var Muffin2 = document.getElementById("muffin5");
+
+       var paymentMGCash = document.getElementById("gcash");
+       var paymentMCOD = document.getElementById("cod");
+       
+       var totBill = 0;
+    if (AmericanoT.checked){
+         totBill = totBill + 55;
+     }
+    else if (AmericanoG.checked) {
+         totBill = totBill + 70;
+     }
+     
+    if (MacchiatoT.checked){
+         totBill = totBill + 55;
+     }
+    else if (MacchiatoG.checked) {
+         totBill = totBill + 70;
+     }
+
+     if (VanillaT.checked){
+         totBill = totBill + 55;
+     }
+    else if (VanillaG.checked) {
+         totBill = totBill + 70;
+     }
+
+     if (MatchaT.checked){
+         totBill = totBill + 55;
+     }
+    else if (MatchaG.checked) {
+         totBill = totBill + 70;
+     }
+
+    if (OkinawaT.checked){
+         totBill = totBill + 55;
+     }
+     else if (OkinawaG.checked) {
+         totBill = totBill + 70;
+     }
+
+    if (WintermelonT.checked){
+         totBill = totBill + 55;
+     }
+     else if (WintermelonG.checked) {
+         totBill = totBill + 70;
+     }
+	
+    if (VelvetT.checked){
+         totBill = totBill + 55;
+     }
+     else if (VelvetG.checked) {
+         totBill = totBill + 70;
+     }
+
+     if (MmatchaT.checked){
+         totBill = totBill + 55;
+     }
+     else if (MmatchaG.checked) {
+         totBill = totBill + 70;
+     }
+     if (Cookie1.checked){
+         totBill = totBill + 45;
+     }
+     else if (Cookie2.checked) {
+         totBill = totBill + 65;
+     }
+     if (Croissant1.checked){
+         totBill = totBill + 45;
+     }
+     else if (Croissant2.checked) {
+         totBill = totBill + 65;
+     }
+    if (Donut1.checked){
+         totBill = totBill + 45;
+     }
+     else if (Donut2.checked) {
+         totBill = totBill + 65;
+     }
+    
+     if (Muffin1.checked){
+         totBill = totBill + 45;
+     }
+     else if (Muffin2.checked) {
+         totBill = totBill + 65;
+     }
+
+	 else {
+	    //
+	 }
+	 
+    var correctValue = amountPlaced;
+    if (correctValue < totBill) {
+         alert ("You have placed an incorrect value. \nPlease try again!");
+	 }
+    else if (correctValue == 0) {
+        alert ("You haven't entered a value. \nPlease try again!");
+    }
+    else if (correctValue > 0 && totBill == 0) {
+        alert ("You don't have items in your cart. Please add item(s) first!");
+    }
+	else if (correctValue > totBill && totBill > 0) {
+    document.write("<br><br><center><span style=\"color:black;font-size: 13px; font-family:arial\">");
+    document.write("<br><h1>Summary of Purchases</h1><br><br>")
+    document.write("<br>===========================================================================<br>");
+    document.write("Cart Items");
+    document.write("<br>===========================================================================<br>");
+    document.write("<h4> Name:");
+    document.write("<span style=\"color:black; padding-left: 80px; padding-right: 80px; text-align: center;\">Size:</span>");
+    document.write(" Price:</h4>");
+
+    if (AmericanoT.checked){
+         document.write("<br>");
+         document.write(" > Americano"); 
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Tall</span>");
+         document.write(" PHP55.00");
+  
+
+     }
+    else if (AmericanoG.checked) {
+         document.write("<br>");
+         document.write(" > Americano");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Grande</span>");
+         document.write(" PHP70.00");
+
+
+     }
+     
+    if (MacchiatoT.checked){
+         document.write("<br>");
+         document.write(" > Macchiato");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Tall</span>");
+         document.write(" PHP55.00");
+
+
+     }
+    else if (MacchiatoG.checked) {
+         document.write("<br>");
+         document.write(" > Macchiato");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Grande</span>");
+         document.write(" PHP70.00");
+
+
+     }
+
+    if (VanillaT.checked){
+         document.write("<br>");
+         document.write(" > Vanilla");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Tall</span>");
+         document.write(" PHP55.00");
+
+
+     }
+    else if (VanillaG.checked) {
+         document.write("<br>");
+         document.write(" > Vanilla");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Grande</span>");
+         document.write(" PHP70.00");
+
+
+     }
+
+    if (MatchaT.checked){
+         document.write("<br>");
+         document.write(" > Matcha");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Tall</span>");
+         document.write(" PHP55.00");
+
+
+     }
+    else if (MatchaG.checked) {
+         document.write("<br>");
+         document.write(" > Matcha");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Grande</span>");
+         document.write(" PHP70.00");
+
+
+     }
+ 
+    if (OkinawaT.checked){
+         document.write("<br>");
+         document.write(" > Okinawa");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Tall</span>");
+         document.write(" PHP55.00");
+
+
+     }
+     else if (OkinawaG.checked) {
+         document.write("<br>");
+         document.write(" > Okinawa");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Grande</span>");
+         document.write(" PHP70.00");
+
+
+     }
+ 
+    if (WintermelonT.checked){
+         document.write("<br>");
+         document.write(" > Wintermelon");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Tall</span>");
+         document.write(" PHP55.00");
+
+
+     }
+     else if (WintermelonG.checked) {
+         document.write("<br>");
+         document.write(" > Wintermelon");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Grande</span>");
+         document.write(" PHP70.00");
+
+     }
+
+    if (VelvetT.checked){
+         document.write("<br>");
+         document.write(" > Red Velvet");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Tall</span>");
+         document.write(" PHP55.00");
+
+     }
+     else if (VelvetG.checked) {
+         document.write("<br>");
+         document.write(" > Red Velvet");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Grande</span>");
+         document.write(" PHP70.00");
+
+
+     }
+
+         if (MmatchaT.checked){
+         document.write("<br>");
+         document.write(" > Matcha");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Tall</span>");
+         document.write(" PHP55.00");
+
+
+     }
+     else if (MmatchaG.checked) {
+         document.write("<br>");
+         document.write(" > Matcha");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">Grande</span>");
+         document.write(" PHP70.00");
+
+
+     }
+
+     if (Cookie1.checked){
+         document.write("<br>");
+         document.write(" > Chocolate Chip Cookie"); 
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">3pcs</span>");
+         document.write(" PHP45.00");
+
+     }
+    else if (Cookie2.checked) {
+         document.write("<br>");
+         document.write(" > Chocolate Chip Cookie");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">5pcs</span>");
+         document.write(" PHP65.00");    
+     }
+     if (Croissant1.checked){
+         document.write("<br>");
+         document.write(" > Croissant");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">3pcs</span>");
+         document.write(" PHP45.00");
+
+
+     }
+     else if (Croissant2.checked) {
+         document.write("<br>");
+         document.write(" > Croissant");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">5pcs</span>");
+         document.write(" PHP65.00");
+ 
+     }
+         if (Donut1.checked){
+         document.write("<br>");
+         document.write(" > Glazed Donut");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">3pcs</span>");
+         document.write(" PHP45.00");
+
+     }
+     else if (Donut2.checked) {
+         document.write("<br>");
+         document.write(" > Glazed Donut");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">5pcs</span>");
+         document.write(" PHP65.00");
+  
+     }
+     if (Muffin1.checked){
+         document.write("<br>");
+         document.write(" > Blueberry muffin"); 
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">3pcs</span>");
+         document.write(" PHP45.00");
+
+
+     }
+    else if (Muffin2.checked) {
+         document.write("<br>");
+         document.write(" > Blueberry muffin");
+         document.write("<span style=\"color:black; padding-left: 5%; padding-right: 5%; text-align: center;\">5pcs</span>");
+         document.write(" PHP65.00");
+     }
+     document.write("<br>===========================================================================<br>");
+     document.write("Total : PHP "+ totBill);
+     document.write("<br>");
+     document.write("Amount Placed : PHP "+ amountPlaced);
+     var change = parseFloat(amountPlaced) - parseFloat(totBill);
+     document.write("<br>Your Change : PHP "+ change);
+     
+     document.write("<br>Payment Method : ");
+     if (paymentMGCash.checked){
+         document.write("GCASH");
+     }
+     else if (paymentMCOD.checked){
+         document.write("Cash on Delivery");
+     }
+     
+     document.write("<h4> Customer Details </h4>");
+     document.write("Name: " + Name);
+     document.write("<br>Address: "+ Address);
+     document.write("<br>Contact Number: "+ Contact);
+    
+
+    }
+    }
+</script>
+<style>
+    body {
+        background-image: url('https://img.freepik.com/premium-photo/old-brown-paper-grunge-background-abstract-liquid-coffee-color-texture_51524-13260.jpg?w=2000');
+    }
+	nav{
+width:100%;
+background:rgba(107, 67, 11, 0.945);
+  overflow:80px;
+border-radius: 15px;
+}
+	.container{
+	list-type:none;
+	display:flex;
+	}
+	nav a{
+	width:40px;
+	display:block;
+	padding:10px 40px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color:#ffffff;
+	text-align:center;
+	margin-top: 8%;
+}
+.items {
+	padding-right: 80px;
+  margin-left: 3%;
+	font-size: 150%;
+  color: #ffffff;
+  list-style: none;
+}
+.Head {
+        border-style: solid;
+        border-radius: 10px;
+        color: #ffedbb;
+        text-align: center;
+        background-color: rgba(255, 237, 137, 0.945);
+        margin-top: 0.5%;
+       margin-bottom: 1%;
+       margin-left: 1%;
+        width: 97.5%;
+    }
+    table {
+        width: 100%;
+	  height:100%;
+    }
+    .l4 {
+        width: 100%;
+        border-radius: 10px;
+        background-color:rgb(46, 40, 4);
+        padding: 10px;
+        font-size: 120%;
+    }
+    .l3{
+        width: 20%;
+        border-radius: 10px;
+        background-color:#f3af2f;
+        padding: 10px;
+        font-size: 120%;
+    }
+    .l2{
+        width: 100%;
+        border-radius: 10px;
+        background-color:#f3af2f;
+        padding: 10px;
+        font-size: 120%;
+    }
+
+    .l1 {
+        width: 20%;
+        border-radius: 20px;
+        background-color:#bdb762;
+        font-size: 120%;
+        color: #3c2406;
+    }
+    a:link {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+a:visited {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+a:hover {
+	color: #351500;
+	transition: 0.4s;
+	font-size:150%;
+	text-decoration: none;
+}   
+a:active {
+	color: #ee8f98;
+	text-decoration: none;
+}
+    .l4 {
+        margin-left: 25%;
+        width: 50%;
+        background-color:#f3af2f;
+    }
+    .logo{
+  margin-top: 1%;
+  margin-bottom: 1%;
+	font-size: 140%;
+  list-style: none;
+}
+  
+</style>
+<html>
+    <body>
+<nav>
+<ul class="container">
+<img src="C:\Users\MARGARET\Documents\Downloads\b59044e2-0860-48d4-be35-b58009a0fa02.jpg" width="75px" height="70" class="logo">
+<li class="items"><a href="index.html">HOME</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li class="items"><a href="product.html">PRODUCTS</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li class="items"><a href="ordernow.html">ORDER NOW</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li class="items"><a href="aboutus.html">ABOUT US</a></li>
+            </ul>
+</nav>
+        <div class="Head">
+            <table>
+                <tr>
+                    <td colspan="4" class="l2"><h3>ORDER</h3></td>
+                </tr>
+                <tr>
+                  <td>
+                   <form name = frmsample>
+                    <table border = 2 >
+                    <tr>
+                    <th colspan="3" class="l2"> Select Item</th>
+                    </tr>
+                    <tr>
+                     <th class="l3">Coffee</th>
+                     <th class="l3">Milktea</th>
+                     <th class="l3">Dessert</th>
+                    </tr>
+                    <tr>
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtAmericano" value="AmericanoT" id=americanot> Americano (TALL 55Pesos)<br>
+                            <input type="radio" name="txtAmericano" value="AmericanoG" id=americanog> Americano (GRANDE 70Pesos)
+                            <br>
+                        
+                        </td>
+                    
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtokinawa" value="OkinawaT" id=okinawat> Okinawa (TALL 55Pesos)<br>
+                            <input type="radio" name="txtokinawa" value="OkinawaG" id=okinawag> Okinawa (GRANDE 70Pesos)
+                        </td>
+                        
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtCookie" value="Cookie1" id=cookie3> Chocolate Chip Cookie (3pcs 45Pesos)<br>
+                            <input type="radio" name="txtCookie" value="Cookie2" id=cookie5> Chocolate Chip Cookie (5pcs 65Pesos)
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtMacchiato" value="MacchiatoT" id=macchiatot> Macchiato (TALL 55Pesos)<br>
+                            <input type="radio" name="txtMacchiato" value="MacchiatoG" id=macchiatog> Macchiato (GRANDE 70Pesos)
+                           
+                        </td>
+                        
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtWintermelon" value="WintermelonT" id=wintermelont> Wintermelon (TALL 55Pesos)<br>
+                            <input type="radio" name="txtWintermelon" value="WintermelonG" id=wintermelong> Wintermelon (GRANDE 70Pesos)
+                           
+                        </td>
+                        
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtCroissant" value="Croissant1" id=croissant3> Croissant (3pcs 45Pesos)<br>
+                            <input type="radio" name="txtCroissant" value="Croissant2" id=croissant5> Croissant (5pcs 65Pesos)
+                            <br>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtVanilla" value="VanillaT" id=vanillat> Vanilla (TALL 55Pesos)<br>
+                            <input type="radio" name="txtVanilla" value="VanillaG" id=vanillag>  Vanilla (GRANDE 70Pesos)
+                            <br>
+                           
+                        </td>
+                           <td class="l1" align="left">
+                            <input type="radio" name="txtVelvet" value="VelvetT" id=velvett> Red Velvet (TALL 55Pesos)<br>
+                            <input type="radio" name="txtVelvet" value="VelvetG" id=velvetg> Red Velvet (GRANDE 70Pesos)
+                            <br>
+                           
+                        </td>
+                      
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtdonut" value="Donut1" id=donut3> Glaze Donut (3pcs 45Pesos)<br>
+                            <input type="radio" name="txtdonut" value="Donut2" id=donut5> Glaze Donut (5pcs 65Pesos)
+                            <br>
+                        </td>
+                        
+                    </tr>  
+       
+                    <tr>
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtMmatcha" value="MmatchaT" id=mmatchat> Matcha (TALL 55Pesos)<br>
+                            <input type="radio" name="txtMmatcha" value="MmatchaG" id=mmatchag> Matcha (GRANDE 70Pesos)
+                            <br>
+                        
+                        </td>
+                        <td class="l1" align="left">
+                            <input type="radio" name="txtmatcha" value="MatchaT" id=matchat> Matcha (TALL 55Pesos)<br>
+                            <input type="radio" name="txtmatcha" value="MatchaG" id=matchag> Matcha (GRANDE 70Pesos)
+                            <br>
+                          
+                        </td>
+                      		<td class="l1" align="left">
+                            <input type="radio" name="txtmuffin" value="Muffin1" id=muffin3> Blueberry muffin (3pcs 45Pesos)<br>
+                            <input type="radio" name="txtmuffin" value="Muffin2" id=muffin5> Blueberry muffin (5pcs 65Pesos)
+                        
+                        </td>
+                    </tr>  
+                </table>
+                <br>
+                <br>
+              <table width = 200 border = 1 class = "l4" >
+              <tr><td align ="center" colspan = 2><b>Customer Information</b></td> 
+              <tr><td> Name </td>
+              <td><input type="text" name="txtName" size=58></td>
+              </tr>
+              <tr><td> Address </td>
+              <td><input type="text" name="txtAddress" size=58></td>
+              </tr>
+              <tr><td> Contact Number </td>
+              <td><input type="text" name="txtContact" size=58></td>
+              </tr>
+              <tr><td> Payment Method </td>
+                <td>
+                <input type="radio" name="txtPayment" value="paymentMGcash" id=gcash> GCash
+                    &nbsp;&nbsp;
+                <input type="radio" name="txtPayment" value="paymentMCOD" id=cod> Cash on Delivery</td>
+              </tr>
+              <tr><td> Amount </td>
+              <td><input type=text name=txtPrice size=58 id=paymentR></td>
+              </tr>
+              <br>
+              <br>
+              <tr><td align=center colspan = 2>
+              <div class = but>
+              <button onclick="acceptInput()">Click to Pay</button>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type=reset value=Reset>
+              </div>
+              </td>
+              </tr>
+              </table>
+              <br>
+              
+              </form>
+              </td>
+            </tr>
+                </table>
+                   </div>
+    </body>
+</html>
